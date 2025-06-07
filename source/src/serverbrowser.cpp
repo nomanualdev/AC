@@ -429,7 +429,7 @@ void checkresolver()
         loopv(servers)
         {
             serverinfo &si = *servers[i];
-            if(name == si.name)
+            if(name && !strcmp(name, si.name))
             {
                 si.resolved = serverinfo::RESOLVED;
                 si.address.host = addr.host;

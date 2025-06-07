@@ -275,7 +275,7 @@ COMMAND(getdoc, "si");
 char *xmlstringenc(char *d, const char *s, size_t len)
 {
     if(!d || !s) return NULL;
-    struct spchar { char c; char repl[8]; } const spchars[] = { {'&', "&amp;"}, {'<', "&lt;"}, {'>', "gt;"}, {'"', "&quot;"}, {'\'', "&apos;"}};
+    struct spchar { char c; char repl[8]; } const spchars[] = { {'&', "&amp;"}, {'<', "&lt;"}, {'>', "&gt;"}, {'"', "&quot;"}, {'\'', "&apos;"}};
 
     char *dc = d;
     const char *sc = s;
